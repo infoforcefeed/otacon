@@ -2,6 +2,7 @@ create table users (
     id uuid primary key,
     email citext unique,
     password_hash text not null,
+    admin bool not null default false,
     created_at timestamp with time zone not null default now(),
     updated_at timestamp with time zone not null default now()
 );
